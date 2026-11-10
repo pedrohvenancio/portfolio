@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pedro Venâncio | Portfólio 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Grotesk:wght@300;400;500;700&family=DM+Serif+Display&family=Bowlby+One&family=Anton&family=Unbounded:wght@800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#130B0A;--pk:#F6C9D4;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--pk);font:400 16px/1.45 "Space Grotesk",system-ui,sans-serif}
+.s{container-type:inline-size;position:relative;aspect-ratio:16/9;max-width:1600px;margin:0 auto;background:var(--b,#130B0A);color:var(--t,#F6C9D4);overflow:hidden}
+.in{position:absolute;inset:0;padding:2.2cqw 2cqw 4.6cqw;display:flex;flex-direction:column}
+.fit{font-family:Syne,"Archivo Black",sans-serif;font-weight:800;text-transform:uppercase;white-space:nowrap;display:inline-block;line-height:.95;color:var(--pk)}
+.rule{border:0;border-top:1px solid currentColor;margin:0}
+.sub{display:flex;justify-content:space-between;font-weight:700;font-size:clamp(14px,1.25cqw,22px);padding-top:.5cqw}
+.mid{flex:1;display:flex;align-items:center;justify-content:center;position:relative}
+.stack{width:13cqw;height:16cqw;border-radius:.6cqw;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 .4cqw 1.4cqw rgba(0,0,0,.5)}
+.stack span{flex:1;display:grid;place-items:center;font-size:2cqw;line-height:1}
+.pill{position:absolute;background:var(--pk);color:#1A0F0E;border-radius:99px;padding:.25cqw 1cqw;font-size:clamp(12px,1.05cqw,18px);font-weight:500;text-decoration:none;border:1px solid #1A0F0E}
+.pill:hover{background:#fff}
+.intro{text-align:center;max-width:62cqw;margin:0 auto;font-size:clamp(14px,1.05cqw,19px)}
+.toc{margin-top:1.2cqw;display:grid;gap:.45cqw;font-size:clamp(16px,2cqw,34px);font-weight:500}
+.toc a{color:inherit;text-decoration:none;display:flex;align-items:baseline;gap:1.4cqw}
+.toc a:hover{text-decoration:underline;text-underline-offset:.3em}
+.toc em{font:400 clamp(11px,.85cqw,15px) "Space Grotesk";font-style:normal;opacity:.8}
+.toc .brand{font-size:1.05em}
+.sp{flex:1}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4cqw;font-size:clamp(14px,1.12cqw,21px);line-height:1.4;max-width:80cqw}
+.cols h3{font:700 clamp(13px,1.3cqw,22px) "Space Grotesk";text-transform:uppercase;margin:0 0 2.4cqw}
+.cols p{margin:0 0 1cqw}
+.bot{display:flex;justify-content:space-between;align-items:flex-end}
+.tags{display:flex;gap:2.4cqw;font-weight:500;font-size:clamp(14px,1.45cqw,26px)}
+.num{font:300 clamp(80px,17cqw,300px)/.78 "Space Grotesk";color:var(--n)}
+.wmw{flex:1;display:grid;place-items:center;text-align:center}
+.wm{font-size:10cqw;color:var(--w);line-height:1;white-space:nowrap;display:inline-block}
+.wm .y{color:#FFD400}
+.cap{text-align:center;max-width:56cqw;margin:0 auto 1.6cqw;font-size:clamp(13px,1.02cqw,18px)}
+.chips{display:flex;gap:.6cqw;justify-content:center;margin-bottom:1.6cqw}
+.chips i{width:2cqw;height:2cqw;min-width:18px;min-height:18px;border-radius:50%;border:1px solid currentColor}
+.ft{position:absolute;left:2cqw;right:2cqw;bottom:1.5cqw;display:flex;justify-content:space-between;border-top:1px solid currentColor;padding-top:.5cqw;font-size:clamp(11px,.8cqw,15px)}
+.pl{flex:1;display:flex;justify-content:center;align-items:center;gap:2.6cqw}
+.post{container-type:inline-size;width:21cqw;aspect-ratio:4/5;border:1.5px solid rgba(0,0,0,.25);border-radius:1cqw;padding:6cqw;display:flex;flex-direction:column;justify-content:space-between;text-align:left;cursor:pointer;background:var(--pb);color:var(--pf);font-family:var(--ff),serif;transition:transform .35s;box-shadow:0 .5cqw 1.6cqw rgba(0,0,0,.35)}
+.post:nth-child(1){transform:rotate(-3deg)}.post:nth-child(3){transform:rotate(3deg)}
+.post[aria-pressed="true"],.post:hover{transform:rotate(0) scale(1.03)}
+.post .k{font:500 5cqw/1.2 "Space Grotesk"}
+.post .h{font-size:var(--sz,10.5cqw);line-height:1;white-space:pre-line;font-weight:var(--w,400);text-transform:var(--tf,none)}
+.post .s2{font:400 5cqw/1.3 "Space Grotesk"}
+.post .bk{font:400 4.7cqw/1.35 "Space Grotesk";display:grid;gap:3cqw}
+.post .bk b{display:block}
+.post:focus-visible,.pill:focus-visible,.toc a:focus-visible,.home:focus-visible{outline:3px solid #FFD400;outline-offset:3px}
+.hint{text-align:center;font-size:clamp(12px,.9cqw,16px);margin:1.2cqw 0 0;opacity:.85}
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:4cqw;font-size:clamp(13px,1.05cqw,19px);max-width:70cqw;margin-top:3cqw}
+.ab p{margin:0 0 1.4cqw}.ab b{display:block;font-weight:700}
+.home{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));background:var(--pk);color:#1A0F0E;text-decoration:none;font-weight:700;font-size:14px;border-radius:99px;padding:8px 16px;z-index:5}
+@media(max-width:760px){
+ .s{aspect-ratio:auto}
+ .in{position:relative;inset:auto;padding:26px 20px 64px;min-height:480px;gap:22px}
+ .cols{grid-template-columns:1fr;gap:20px}.cols h3{margin-bottom:6px}
+ .pl{flex-direction:column;gap:22px}.post{width:min(80vw,320px);padding:24px}.post:nth-child(n){transform:none}
+ .post .k{font-size:15px}.post .h{font-size:var(--szm,38px)}.post .s2,.post .bk{font-size:15px}
+ .tags{flex-wrap:wrap;gap:10px 18px}
+ .toc{font-size:20px}.toc a{flex-wrap:wrap;gap:2px 12px}
+ .stack{width:150px;height:190px}.stack span{font-size:24px}
+ .mid{padding:30px 0;flex-direction:column}
+ .pill{position:static;margin:4px}
+ .ab{grid-template-columns:1fr;max-width:none}
+ .ft{font-size:12px}.sub{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.post{transition:none}}
+</style>
+</head>
+<body>
+<main id="deck"></main>
+<a class="home" href="#toc">índice</a>
+<script>
+var PJ=[
+{n:"kôfē",ff:"DM Serif Display",w:400,tg:["Branding","Redes sociais","Direção de arte"],tgs:"branding, redes sociais",
+ ob:"#2A1810",tx:"#E6A15C",nm:"#F3E3CC",lg:"#2A1810",wc:"#F3E3CC",pb:"#6B3F27",ch:["#2A1810","#E6A15C","#F3E3CC"],
+ m:["#2A1810","#F3E3CC"],a:["#E6A15C","#2A1810"],s:["#F3E3CC","#2A1810"],
+ br:"kôfē é uma cafeteria de especialidade com balcão pequeno. O desafio era falar de café técnico sem afastar quem só quer um café bom.",
+ so:"Transformei o café em números e notas: a receita em três cifras, os pontos de torra e o lote do dia. A voz é curta, calma e técnica. Os circunflexos do nome viram o detalhe da marca.",
+ me:"Cupons de balcão resgatados aos sábados. Eu compararia cada tipo de post pela quantidade de cupons que gerou.",
+ cp:"Um nome com acentos curiosos pede uma letra com personalidade. A serifada de contraste alto dá calor e elegância, e deixa os circunflexos em evidência.",
+ p:[["m","receita de hoje","18 g\n36 g\n28 s","Moído, extraído, servido. Sem pressa e sem mistério.","Todo bom café começa em três números. Qual deles você ainda não conhecia?","Números viram identidade visual, e a pergunta no final gera comentários."],
+ ["a","ponto de torra","Claro demais,\nescuro demais\nou no ponto?","Neste sábado o balcão serve os três.","Prove os três lado a lado. Sábado, às 9h, com cupom no Stories.","Uma pergunta com três respostas leva a pessoa para a visita presencial."],
+ ["s","no balcão","Etiópia Guji, notas de pêssego.","Último lote. Acaba quando acabar.","Pêssego no café? Vem sentir. O lote é pequeno.","Escassez real e curiosidade sensorial, sem desconto."]]},
+{n:"restrənt",ff:"Bowlby One",w:400,sz:"9.2cqw",szm:"34px",tg:["Branding","Redes sociais","Humor"],tgs:"branding, redes sociais",
+ ob:"#E8321E",tx:"#FFF3DC",nm:"#FFF3DC",lg:"#FFC21A",wc:"#111111",pb:"#111111",ch:["#E8321E","#FFC21A","#111111"],
+ m:["#E8321E","#FFFFFF"],a:["#FFC21A","#111111"],s:["#F4F0E6","#E8321E"],
+ br:"restrənt é uma lanchonete de bairro com o nome escrito do jeito que se fala. Precisava soar rápida, divertida e gostosa, sem parecer rede de fast food.",
+ so:"O nome virou conteúdo: pronúncia, comanda e gíria de balcão. Vermelho ketchup, amarelo mostarda e uma fonte gorda e amigável. A voz é a do chapista que conhece todo mundo.",
+ me:"Resgates da oferta fixa de terça-feira. O formato de comanda é repetido toda semana para criar hábito.",
+ cp:"Uma fonte pesada e arredondada, como letreiro de lanchonete. O schwa (ə) no nome é o convite para falar em voz alta.",
+ p:[["a","pedido #027","Duplo smash\nsem cebola\ncom saudade","Total: R$ 28. Troco: um sorriso.","Comanda do dia. E o seu pedido de sempre, qual é?","O formato de comanda é reconhecível e vira série fácil de repetir."],
+ ["m","como se fala","res·trənt","Do jeito que a gente fala. Do jeito que a gente serve: rápido.","Sim, é assim que fala. Chega mais, o chapa já esquentou.","O nome vira conteúdo: pronúncia e personalidade em um único post."],
+ ["s","toda terça","X-tudo pela metade do preço","Só até acabar o pão.","Terça é dia de X-tudo pela metade. Marca quem vai com você.","Oferta fixa cria hábito, e o prazo curto cria urgência."]]},
+{n:"redskaper",ff:"Space Grotesk",w:700,sz:"9.5cqw",szm:"34px",tg:["Branding","Redes sociais","Conteúdo útil"],tgs:"branding, conteúdo",
+ ob:"#1B1F24",tx:"#E08850",nm:"#E7EAEE",lg:"#E7EAEE",wc:"#1B1F24",pb:"#9AA3AD",ch:["#1B1F24","#C4622D","#E7EAEE"],
+ m:["#1B1F24","#E7EAEE"],a:["#C4622D","#FFFFFF"],s:["#E7EAEE","#1B1F24"],
+ br:"redskaper (“utensílios” em sueco e norueguês) é uma loja de utensílios de cozinha com poucos itens e muita qualidade. O desafio era justificar o preço sem gritar.",
+ so:"Estilo escandinavo: fundo neutro, grafite, cobre e muito espaço. Cada post ensina algo (um corte, um cuidado, uma garantia) e vende sem pedir a venda.",
+ me:"Cliques no catálogo vindos de posts de conteúdo útil. Os posts de ensino são o principal canal de venda.",
+ cp:"Uma grotesca limpa, em minúsculas, como a etiqueta de um bom objeto. O cobre aparece só em detalhes.",
+ p:[["s","anatomia","Uma faca.\nUm único uso.","Cabo de nogueira, lâmina de aço carbono, 190 g.","Menos objetos na gaveta. Mais prazer em cada corte.","Posiciona a marca na ideia de menos itens e melhor qualidade."],
+ ["m","manual","3 cortes que toda faca de chef precisa dominar","Fatiar, picar, brunoise.","Salve este post para a próxima vez que a cebola te vencer.","Conteúdo útil que ensina e vende sem pedir a venda."],
+ ["a","garantia","Feito para durar vinte anos.","Se quebrar antes, a gente troca.","Compre uma vez. Cuide bem. Herde para os filhos.","Uma promessa forte e simples sustenta o preço premium."]]},
+{n:"MARGIN<span class='y'>Á</span>LIA",ff:"Anton",w:400,tf:"uppercase",tg:["Branding","Streetwear","Direção de arte"],tgs:"branding, streetwear",
+ ob:"#FFD400",tx:"#161616",nm:"#161616",lg:"#161616",wc:"#EDEDE8",pb:"#FF5B14",ch:["#161616","#FFD400","#CFCFCA","#FF5B14"],
+ m:["#161616","#EDEDE8"],a:["#FFD400","#161616"],s:["#CFCFCA","#161616"],
+ br:"A marginal dá a volta em São Paulo. A marginália é uma marca de streetwear sobre tudo que acontece nela: trânsito, viaduto, rolê e volta pra casa.",
+ so:"Logo condensado e pesado com o Á em amarelo de faixa. O símbolo são dois arcos de viaduto que formam um “m”. As peças têm malha pesada, corte largo e a faixa de pista como detalhe.",
+ me:"Cadastros na lista de espera e dias até esgotar o drop. Cada drop tem tiragem curta e numerada.",
+ cp:"A fonte Anton lembra placa de rodovia. O símbolo funciona em patch, bordado, boné e estampa de costas.",
+ p:[["m","drop 001","Km 0","Sábado, 10h. 150 peças de cada, numeradas.","Drop 001 no sábado, às 10h. 150 peças de cada, numeradas. Quando acabar, acabou.","Tiragem curta e data fixa criam urgência sem desconto."],
+ ["a","km 0","Todo mundo volta pra casa por algum lugar.","Roupa pra quem mora no caminho.","A marginal dá a volta na cidade. Marca quem mora no seu caminho.","Uma frase que todo paulistano entende vira marcação espontânea."],
+ ["s","marca a gente","Mostra seu fit.","A melhor foto vira post.","Foto na marginal, na estação, no ponto de ônibus. A melhor entra no feed.","Conteúdo de cliente reduz custo de produção e gera prova social."]]},
+{n:"corrente",ff:"Unbounded",w:800,sz:"7.4cqw",szm:"28px",tg:["Branding","Redes sociais","Dicas rápidas"],tgs:"branding, redes sociais",
+ ob:"#0A0A0A",tx:"#C6FF3D",nm:"#F2F2EE",lg:"#C6FF3D",wc:"#0A0A0A",pb:"#2B2B2B",ch:["#0A0A0A","#C6FF3D","#FFFFFF"],
+ m:["#0A0A0A","#C6FF3D"],a:["#C6FF3D","#0A0A0A"],s:["#FFFFFF","#0A0A0A"],
+ br:"corrente é uma oficina de bicicletas para quem pedala todo dia. O desafio era ser útil e simpática, sem parecer manual técnico.",
+ so:"Preto e verde-limão, as cores de uma bike de rua com refletivo. Os posts são dicas de 30 segundos que desfazem mitos e levam ao agendamento da revisão.",
+ me:"Revisões agendadas por semana, vindas do link da bio. Dicas que geram salvamentos são repetidas em novos formatos.",
+ cp:"Uma fonte larga e arredondada como o desenho de uma roda. A cor de alta visibilidade lembra colete e refletivo.",
+ p:[["a","calibragem","32 PSI é mito.","Seu peso, seu pneu, sua pressão. Aprenda a calcular.","O número certo depende de você. Salve e confira antes de pedalar.","Quebrar um mito comum gera salvamentos e compartilhamentos."],
+ ["m","antes do furo","Olhe o pneu antes de sair.","30 segundos que evitam 1 hora de empurrão.","Rachaduras, pedras e pressão: o check-in rápido que salva o seu dia.","Dica de 30 segundos é fácil de lembrar e mostra expertise."],
+ ["s","domingo","Revisão sem fila das 8h às 12h.","Chegou, deixou, tomou café, levou.","Domingo cedo é o melhor horário. Agende pelo link da bio.","Oferta de horário reduz o atrito e leva ao agendamento."]]}
+];
+var h="";
+var plain=function(x){return x.replace(/<[^>]+>/g,"").replace(/á/i,function(c){return c})};
+/* capa */
+h+='<section class="s" id="top"><div class="in"><div><span class="fit" data-w="1">Pedro Venâncio</span></div><hr class="rule" style="margin-top:.5cqw"><div class="sub"><span>Portfólio de marca e conteúdo</span><span>2026</span></div><div class="mid"><div class="stack" aria-hidden="true">'+PJ.map(function(p){return'<span style="background:'+p.lg+';color:'+p.wc+';font-family:\''+p.ff+'\';font-weight:'+p.w+(p.tf?';text-transform:'+p.tf:'')+'">'+p.n+'</span>'}).join("")+'</div><a class="pill" style="left:34%;top:18%" href="mailto:pedroh.venan@gmail.com">e-mail</a><a class="pill" style="right:32%;top:42%" href="https://wa.me/5511969356529">WhatsApp</a><a class="pill" style="left:38%;bottom:12%" href="#about">sobre mim</a></div><p class="intro">Oi! Eu sou o Pedro, diagramador de formação, com 3 anos de agência e em transição para marketing e conteúdo. Estes são 5 projetos autorais: marcas fictícias que criei do nome ao post, para mostrar como penso identidade, voz e redes sociais. Nenhum tem cliente real nem resultados publicados.</p></div></section>';
+/* índice */
+h+='<section class="s" id="toc"><div class="in"><div class="toc">'+PJ.map(function(p,i){return'<a href="#p'+(i+1)+'"><span>0'+(i+1)+' _</span><span class="brand" style="font-family:\''+p.ff+'\';font-weight:'+p.w+(p.tf?';text-transform:'+p.tf:'')+'">'+p.n+'</span><em>/'+p.tgs+'</em></a>'}).join("")+'<a href="#about" style="margin-top:1.6cqw"><span>Sobre mim</span></a></div><div class="sp"></div><hr class="rule" style="margin-bottom:.8cqw"><div><span class="fit" data-w="1">Índice</span></div></div></section>';
+/* projetos */
+PJ.forEach(function(p,i){var n="0"+(i+1),F="font-family:'"+p.ff+"';font-weight:"+p.w;
+ h+='<section class="s" id="p'+(i+1)+'" style="--b:'+p.ob+';--t:'+p.tx+';--n:'+p.nm+'"><div class="in"><div class="cols"><div><h3>O brief:</h3><p>'+p.br+'</p></div><div><h3>Minha solução:</h3><p>'+p.so+'</p></div><div><h3>O que eu mediria:</h3><p>'+p.me+'</p></div></div><div class="sp"></div><div class="bot"><div class="tags">'+p.tg.map(function(t){return'<span>'+t+'</span>'}).join("")+'</div><div class="num">'+n+'</div></div></div></section>';
+ h+='<section class="s" style="--b:'+p.lg+';--t:'+p.wc+';--w:'+p.wc+'"><div class="in"><div class="wmw"><span class="wm fit2" data-w=".5" style="'+F+(p.tf?';text-transform:'+p.tf:'')+'">'+p.n+'</span></div><p class="cap">'+p.cp+'</p><div class="chips">'+p.ch.map(function(c){return'<i style="background:'+c+'"></i>'}).join("")+'</div></div><div class="ft"><span>Pedro Venâncio, 2026</span><span>PROJETO '+n+'</span></div></section>';
+ var cl={m:p.m,a:p.a,s:p.s};
+ h+='<section class="s" style="--b:'+p.pb+';--t:#fff"><div class="in"><div class="pl" style="--ff:\''+p.ff+'\';--w:'+p.w+(p.sz?';--sz:'+p.sz+';--szm:'+p.szm:'')+(p.tf?';--tf:'+p.tf:'')+'">'+p.p.map(function(x,k){var c=cl[x[0]];return'<button class="post" data-i="'+i+'-'+k+'" aria-pressed="false" style="--pb:'+c[0]+';--pf:'+c[1]+'" aria-label="Post '+(k+1)+' de '+plain(p.n)+': '+x[1]+'. Toque para ver a legenda."><span class="k">'+x[1]+'</span><span class="h">'+x[2]+'</span><span class="s2">'+x[3]+'</span></button>'}).join("")+'</div><p class="hint">Toque em um post para ver a legenda e o motivo estratégico.</p></div><div class="ft"><span>Pedro Venâncio, 2026</span><span>PROJETO '+n+'</span></div></section>';
+});
+/* sobre */
+h+='<section class="s" id="about"><div class="in"><div class="sub" style="font-weight:500"><span>Experiência e formação</span><span style="display:flex;gap:8px;flex-wrap:wrap"><a class="pill" style="position:static" href="mailto:pedroh.venan@gmail.com">pedroh.venan@gmail.com</a><a class="pill" style="position:static" href="https://wa.me/5511969356529">(11) 96935-6529</a></span></div><div class="ab"><div><p><b>2024, out. a 2026, fev.</b>Diagramador Júnior, Elipse Publicidade</p><p><b>2022, set. a 2024, maio</b>Diagramador Júnior, Diagramei Design e Editoração</p><p><b>Ferramentas</b>InDesign, Canva, CapCut, Excel avançado, Power BI, Word e PowerPoint</p></div><div><p><b>Cursos</b>Excel 2016 Avançado e Power BI (Fundação Bradesco), Oratória de Alta Performance (Kultivi)</p><p><b>Marketing</b>Ensino superior com início previsto para 2027</p><p><b>Idiomas</b>Inglês avançado, espanhol intermediário. São Paulo, SP. Início imediato.</p></div></div><div class="sp"></div><div><span class="fit" data-w="1">Sobre mim</span></div></div><div class="ft"><span>Pedro Venâncio, 2026</span><span>PORTFÓLIO</span></div></section>';
+document.getElementById("deck").innerHTML=h;
+function fit(){var mob=innerWidth<760;document.querySelectorAll(".fit,.fit2").forEach(function(e){var par=e.closest(".in")||e.parentNode;var cs=getComputedStyle(par);var avail=par.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);var wf=parseFloat(e.dataset.w||1);if(e.classList.contains("fit2")&&mob)wf=.9;e.style.fontSize="100px";var w=e.getBoundingClientRect().width||1;e.style.fontSize=(100*avail*wf/w)+"px"})}
+(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(fit);addEventListener("resize",fit);
+var byId={};PJ.forEach(function(p,i){p.p.forEach(function(x,k){byId[i+"-"+k]=x})});
+document.getElementById("deck").addEventListener("click",function(e){var b=e.target.closest(".post");if(!b)return;var x=byId[b.dataset.i],on=b.getAttribute("aria-pressed")==="true";b.setAttribute("aria-pressed",on?"false":"true");
+ b.innerHTML=on?'<span class="k">'+x[1]+'</span><span class="h">'+x[2]+'</span><span class="s2">'+x[3]+'</span>':'<span class="k">'+x[1]+'</span><span class="bk"><span><b>Legenda</b>'+x[4]+'</span><span><b>Por que funciona</b>'+x[5]+'</span></span><span class="s2">Toque para voltar</span>'});
+</script>
+</body>
+</html>
